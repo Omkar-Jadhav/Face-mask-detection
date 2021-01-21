@@ -12,7 +12,7 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
     # Take the dimensions of the frame and then construct a blob from it
     #blob is processed image
     # cv2.dnn.blobFromImage pre-processes the image. It does the mean subtraction for the RGB values
-    # on the image & scales it with 1
+    # on the image & scales it with 1. Mean values are obtained from the total dataset.
     (h, w) = frame.shape[:2]
     blob = cv2.dnn.blobFromImage(frame, 1.0, (224, 224),
                                  (104.0, 177.0, 123.0))
