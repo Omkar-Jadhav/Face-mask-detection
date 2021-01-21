@@ -38,7 +38,7 @@ for category in categories:
         img_path = os.path.join(path,img)
         image = load_img(img_path,target_size=(224,224))  #from keras.preprocessing
         image = img_to_array(image)       #Convert image to array
-        image = preprocess_input(image)   #Using resnet50
+        image = preprocess_input(image)   
 
         data.append(image)
         labels.append(category)
